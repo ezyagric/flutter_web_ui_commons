@@ -45,14 +45,19 @@ class AppButton extends StatelessWidget {
       btnColor = AppColors.white;
       labelColor = AppColors.primary;
       borderColor = AppColors.primary;
+    } 
+    
+    if (type == AppButtonStyle.lightOutline) {
+      btnColor = AppColors.transparent;
+      labelColor = AppColors.white;
+      borderColor = AppColors.white;
     }
 
     if (!enabled) btnColor = AppColors.disabled;
     //colors
 
     if (type == AppButtonStyle.cancel) labelColor = AppColors.textLight;
-
-    return ElevatedButton.icon(
+    return TextButton.icon(
       onPressed: enabled ? onPressed : null,
       iconAlignment: IconPlacement.start == iconPlacement? IconAlignment.start : IconAlignment.end,
       icon: Icon(
@@ -73,6 +78,7 @@ class AppButton extends StatelessWidget {
                 side: BorderSide(color: borderColor)),
           )),
     );
+    
   }
 }
 
@@ -88,6 +94,7 @@ class AppButtonStyle {
   static const  primaryOutline = "primary-outline";
   static const  successOutline = "success-outline";
   static const  secondaryOutline = "secondary-outline";
+  static const  lightOutline = "light-outline";
 }
 
 class IconPlacement {

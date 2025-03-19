@@ -13,5 +13,6 @@ class AppColors{
   
   static const Color light  = Color(0xfff6f6f6);
   static const Color disabled  = Color(0xFFACA4A4);
+  static const Color transparent  = Color(0x00000000);
 
 }
