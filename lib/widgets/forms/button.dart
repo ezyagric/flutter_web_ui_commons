@@ -1,4 +1,4 @@
-part of web_ui_commons;
+part of '../../web_ui_commons.dart';
 
 class AppButton extends StatelessWidget {
   final Function() onPressed;
