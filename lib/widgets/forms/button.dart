@@ -9,6 +9,7 @@ class AppButton extends StatelessWidget {
   final Color color = Colors.white;
   final bool enabled;
   final String iconPlacement;
+  final bool isLoading;
 
   const AppButton({
       super.key,
@@ -18,7 +19,8 @@ class AppButton extends StatelessWidget {
       this.borderRadius,
       this.icon,
       this.iconPlacement = IconPlacement.start,
-      this.enabled=true});
+      this.enabled=true,
+      this.isLoading = false,});
 
   
 
@@ -58,7 +60,7 @@ class AppButton extends StatelessWidget {
 
     if (type == AppButtonStyle.cancel) labelColor = AppColors.textLight;
     return TextButton.icon(
-      onPressed: enabled ? onPressed : null,
+      onPressed: (enabled && !isLoading ) ? onPressed : null,
       iconAlignment: IconPlacement.start == iconPlacement? IconAlignment.start : IconAlignment.end,
       icon: Icon(
         icon,
@@ -71,7 +73,7 @@ class AppButton extends StatelessWidget {
       ),
       style: ButtonStyle(
           minimumSize: const WidgetStatePropertyAll(Size(0, 48)),
-          backgroundColor: WidgetStatePropertyAll(btnColor),
+          backgroundColor: WidgetStatePropertyAll(isLoading? btnColor.withOpacity(0.66): btnColor),
           shape: WidgetStatePropertyAll<RoundedRectangleBorder>(
             RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(borderRadius ?? AppDimens.radius),

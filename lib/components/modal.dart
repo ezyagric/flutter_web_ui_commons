@@ -21,6 +21,7 @@ class AppModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
+      backgroundColor: AppColors.white,
        shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.0),
       ),
@@ -34,7 +35,7 @@ class AppModal extends StatelessWidget {
           children: [
             // Header
             if (title != null)
-              Padding(padding:const  EdgeInsets.all(24), child: Row(
+              Padding(padding:const  EdgeInsets.symmetric(horizontal:24, vertical:16), child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   AppText(
@@ -66,7 +67,7 @@ class AppModal extends StatelessWidget {
             // Footer
             if (actions != null) ...[
              
-             Padding(padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 24), child: Row(
+             Padding(padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24), child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: actions!,))
             ],

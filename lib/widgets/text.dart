@@ -4,10 +4,10 @@ class AppText extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
-  TextAlign? textAlign;
-  int? maxLines;
+  final TextAlign? textAlign;
+  final int? maxLines;
 
-  AppText(
+   AppText(
       {Key? key,
       required this.text,
       this.fontSize = 16,
@@ -23,7 +23,7 @@ class AppText extends StatelessWidget {
       text,
       maxLines: maxLines ?? 100000,
       overflow: TextOverflow.ellipsis,
-      textAlign: textAlign == null ? null : TextAlign.center,
+      textAlign: textAlign ?? TextAlign.start,
       style: TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
