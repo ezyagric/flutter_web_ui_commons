@@ -4,7 +4,7 @@ The main goal of this package is to make it easier for developers to create Web 
 
 ## Getting started
 
-For a fresh flutter project, add the following to your `pubspec.yaml` file:
+For a fresh flutter project, add the following to your `pubspec.yaml` file then run ```flutter pub get```:
 
 ```yaml
 dependencies:
