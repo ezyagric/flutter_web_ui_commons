@@ -1,39 +1,39 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+This is the Web UI Library for EzyAgric Web platforms. It is icluded on all EzyAgric Web platforms so keep that in mind while making changes. It was created by ```ssekaibrahim``` an is the initial contribitor. 
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+The main goal of this package is to make it easier for developers to create Web UI for EzyAgric Web platforms. It is a work in progress and will be updated as we go along.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+For a fresh flutter project, add the following to your `pubspec.yaml` file:
+```yaml
+dependencies:
+  ezyagric_web_ui:
+    git:
+      url: hutter project, add the following to your `pubspec.yaml` file:
+```yaml
+dependencies:
+  ezyagric_web_ui:
+    git:
+      url: URL_ADDRESS.com/EzyAgric/ezyagric_web_ui.git
+      ref: main
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
 ```
 
-## Additional information
+## Usage
+ Open the file `main.dart` and add the following code:
+```dart
+import 'package:ezyagric_web_ui/ezyagric_web_ui.dart';
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Then add the ```ezyAgricWebTheme()``` to the `build` method:
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ezyAgricWebTheme(),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+```

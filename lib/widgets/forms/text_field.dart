@@ -12,7 +12,7 @@ class AppTextField extends StatelessWidget {
   final bool enabled;
 
   const AppTextField({
-    Key? key,
+    super.key,
     this.controller,
     this.label,
     this.hintText,
@@ -22,7 +22,8 @@ class AppTextField extends StatelessWidget {
     this.onChanged,
     this.maxLines = 1,
     this.enabled = true,
-  }) : super(key: key);
+  });
+
 
   @override
   Widget build(BuildContext context) {

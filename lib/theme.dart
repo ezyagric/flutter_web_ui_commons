@@ -1,6 +1,15 @@
 part of 'web_ui_commons.dart';
 
-
+ThemeData ezyAgricWebTheme() {
+  return ThemeData(
+    fontFamily: GoogleFonts.nunitoSans().fontFamily,
+    primaryColor: AppColors.primary,
+    scaffoldBackgroundColor: AppColors.light,
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
+    useMaterial3: true,
+        
+  );
+}
 
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorderFocused = OutlineInputBorder(
@@ -69,6 +78,6 @@ TabBarTheme tabBarThemeData() {
     labelStyle: TextStyle(
         fontSize: 15,
         fontWeight: FontWeight.w900,
-        fontFamily: 'Nunito Sans'),
+        fontFamily: GoogleFonts.nunitoSans().fontFamily),
   );
 }

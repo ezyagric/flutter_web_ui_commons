@@ -7,6 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/route_manager.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -17,8 +18,10 @@ part 'theme.dart';
 /** helper functions */
 part 'utils.dart';
 
+
 part 'constants/color.dart';
 part 'constants/dimens.dart';
+part 'constants/typography.dart';
 
 /** widgets */
 part 'widgets/forms/button.dart';
