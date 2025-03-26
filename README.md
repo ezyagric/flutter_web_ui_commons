@@ -1,6 +1,6 @@
 This is the Web UI Library for EzyAgric Web platforms. It is icluded on all EzyAgric Web platforms so keep that in mind while making changes.  ```ssekaibrahim``` is the initial contribitor to the project. 
 
-The main goal of this package is to make it easier for developers to create Web UI for EzyAgric Web platforms. It is a work in progress and will be updated as we go along.
+The main goal of this package is to maintain a consistent feel and look across all EzyAgric Platforms and make it 10x to create Web UIs. It is a work in progress and will be updated as we go along.
 
 ## Getting started
 
@@ -33,3 +33,23 @@ Then add the ```ezyAgricWebTheme()``` to the `build` method:
     );
   }
 ```
+
+### Widgets
+### Widgets
+
+#### AppText
+`AppText` is a custom text widget that wraps Flutter's Text widget with predefined styles and configurations. It supports different text types and sizes, and can be customized with additional styles.
+Properties:
+- `text`: The text to display.
+- `type`: The type of text to display. Can be `AppTextType.title`, `AppTextType.subtitle`, `AppTextType.body`, or `AppTextType.caption`.
+- `fontSize`: it's a double and it overrides the default size set by the `type`.
+
+Usage:
+```dart
+AppText(
+  text: 'Hello, World!',
+  type: AppTextType.body,
+);
+```
+
+
