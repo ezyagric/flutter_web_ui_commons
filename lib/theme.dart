@@ -1,13 +1,15 @@
 part of 'web_ui_commons.dart';
 
-ThemeData ezyAgricWebTheme() {
+ThemeData ezyAgricWebTheme(BuildContext context) {
   return ThemeData(
     fontFamily: GoogleFonts.nunitoSans().fontFamily,
     primaryColor: AppColors.primary,
     scaffoldBackgroundColor: AppColors.light,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     useMaterial3: true,
-        
+  textTheme: GoogleFonts.robotoTextTheme(
+           Theme.of(context).textTheme, // Use current theme's text theme
+         ),  
   );
 }
 

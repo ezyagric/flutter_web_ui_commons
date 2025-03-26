@@ -28,16 +28,15 @@ Then add the ```ezyAgricWebTheme()``` to the `build` method:
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ezyAgricWebTheme(),
+      theme: ezyAgricWebTheme(context),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 ```
 
 ### Widgets
-### Widgets
 
-#### AppText
+#### 1. AppText
 `AppText` is a custom text widget that wraps Flutter's Text widget with predefined styles and configurations. It supports different text types and sizes, and can be customized with additional styles.
 Properties:
 - `text`: The text to display.
