@@ -35,7 +35,7 @@ class _AppSelectInputState extends State<AppSelectInput> {
           border: const OutlineInputBorder(),
           // icon: Icon(Icons.book),
           hintText: '',
-          labelText: widget.label,
+          labelText: widget.showLabel?widget.label:'',
         ),
         items: widget.items.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(

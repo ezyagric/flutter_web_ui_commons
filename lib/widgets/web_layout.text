@@ -1,0 +1,72 @@
+// ignore: non_constant_identifier_names
+EzyLayout(
+  appBar({
+    logo:"assets/images/logo.png",
+    title:"EzyLayout",
+    actions: [
+      IconButton(
+        icon: Icon(Icons.search),
+        onPressed: () {},
+      ),
+    ],
+  }),
+  sideBar(
+    items: [
+      SideBarItem(
+        icon: Icons.home,
+        label: "Home",
+        onTap: () {},
+        subMenu: [
+          SideBarItem(
+            icon: Icons.home,
+            label: "Home",
+            onTap: () {},
+          ),
+          SideBarItem(
+            icon: Icons.settings,
+            label: "Settings",
+            onTap: () {},
+          ), 
+          SideBarItem(
+            icon: Icons.home,
+            label: "Home",
+            onTap: () {},
+          ),
+          SideBarItem(
+            icon: Icons.settings,
+            label: "Settings",
+            onTap: () {},
+          ),
+        ], // Add subMen
+      ),
+      SideBarItem(
+        icon: Icons.settings,
+        label: "Settings",
+        onTap: () {},
+      ),
+    ],
+  ),
+  body: [
+    Container(
+      pageView:[
+        routes: [
+          route: "/",
+          child: Container(
+            child: Text("Home"),
+          ),
+        ],
+        routes: [
+          route: "/settings",
+          child: Container(
+            child: Text("Settings"),
+          ),
+        ],
+      ]
+    ),
+  ],
+  footer: [
+    Container(
+      child: Text("Footer"),
+    ),  
+  ],
+);

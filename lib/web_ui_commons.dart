@@ -9,6 +9,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 
 /**
@@ -31,6 +32,7 @@ part 'widgets/forms/datepicker.dart';
 
 part 'widgets/container.dart';
 part 'widgets/text.dart';
+part 'widgets/link.dart';
 
 /**components */
 part 'components/shadow.dart';

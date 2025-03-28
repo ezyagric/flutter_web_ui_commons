@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../web_ui_commons.dart';
 
 class AppLink extends StatelessWidget {
   final String text;
@@ -16,21 +16,9 @@ class AppLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap ?? () {
-        // Launch URL using url_launcher or similar package
-        // launchUrl(Uri.parse(url));
-      },
-      child: Text(
-        text,
-        style: style?.copyWith(
-          decoration: TextDecoration.underline,
-          color: Colors.blue,
-        ) ?? const TextStyle(
-          decoration: TextDecoration.underline,
-          color: Colors.blue,
-        ),
-      ),
+    return HtmlWidget(
+      textStyle: style,
+      " <a style='color:${AppColors.primary}' href='$url'>$text</a>",
     );
   }
 }

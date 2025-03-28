@@ -40,7 +40,8 @@ Then add the ```ezyAgricWebTheme()``` to the `build` method:
 `AppText` is a custom text widget that wraps Flutter's Text widget with predefined styles and configurations. It supports different text types and sizes, and can be customized with additional styles.
 Properties:
 - `text`: The text to display.
-- `type`: The type of text to display. Can be `AppTextType.title`, `AppTextType.subtitle`, `AppTextType.body`, or `AppTextType.caption`.
+- `type`: The type of text to display. Can be `headline1`,`headline2`,`headline3`,`headline4`,`title`, `subtitle`, `body`, or `caption`.
+- `color`: Text color `type`.
 - `fontSize`: it's a double and it overrides the default size set by the `type`.
 
 Usage:

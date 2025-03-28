@@ -122,9 +122,9 @@ class _FileInputFieldState extends State<FileInputField> {
           icon: Icons.photo_library_outlined,
           type: AppButtonStyle.success,
           onPressed: () async {
-            final XFile? image =
-                await ImagePicker().pickImage(source: ImageSource.gallery);
-            uploadFile(image);
+           // final XFile? image =
+                //await ImagePicker().pickImage(source: ImageSource.gallery);
+           // uploadFile(image);
           },
         ),
         const SizedBox(
@@ -135,9 +135,9 @@ class _FileInputFieldState extends State<FileInputField> {
           type: AppButtonStyle.successOutline,
           icon: Icons.camera,
           onPressed: () async {
-            final XFile? image =
-                await ImagePicker().pickImage(source: ImageSource.camera);
-            uploadFile(image);
+            // final XFile? image =
+            //     await ImagePicker().pickImage(source: ImageSource.camera);
+            // uploadFile(image);
           },
         ),
       ],
