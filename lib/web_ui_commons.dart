@@ -39,4 +39,5 @@ part 'components/shadow.dart';
 part 'components/modal.dart';
 part 'components/alert.dart';
 part 'components/dialog.dart';
+part 'components/progress_dialog.dart';
 part 'components/empty_message.dart';
