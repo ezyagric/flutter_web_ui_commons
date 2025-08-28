@@ -1,6 +1,6 @@
 name: web_ui_commons
 description: "A flutter package for all reusable widgets, components, functions and utilities."
-version: 0.0.1
+version: 0.0.2
 homepage:
 environment:
   sdk: ">=3.4.0 <4.0.0"
@@ -20,6 +20,7 @@ dependencies:
   firebase_storage: ^12.3.7
   url_launcher: ^6.3.1
   flutter_widget_from_html: ^0.16.0
+  easy_sidemenu: ^0.7.1
 
 dev_dependencies:
   flutter_test:

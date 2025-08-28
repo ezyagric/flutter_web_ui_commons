@@ -2,6 +2,7 @@ library web_ui_commons;
 
 import 'dart:io';
 
+import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:web_ui_commons/colors.dart';
 
 
 /**

@@ -13,7 +13,7 @@ class AppAlert {
       {String title = 'Alert',
       String message = 'This is an alert',
       Color textColor = AppColors.white,
-      Duration duration = const Duration(seconds: 5),
+      Duration duration = const Duration(seconds: 3),
       SnackPosition position = SnackPosition.TOP,
       AlertType type = AlertType.primary}) {
     Color backgroundColor = AppColors.black;
