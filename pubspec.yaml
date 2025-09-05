@@ -1,6 +1,6 @@
 name: web_ui_commons
 description: "A flutter package for all reusable widgets, components, functions and utilities."
-version: 0.0.3
+version: 0.0.4
 homepage:
 environment:
   sdk: ">=3.4.0 <4.0.0"

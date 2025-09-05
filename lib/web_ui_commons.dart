@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:easy_sidemenu/easy_sidemenu.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/route_manager.dart';
@@ -13,6 +14,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:intl/intl.dart';
 import 'package:web_ui_commons/colors.dart';
+
 
 
 /**
@@ -44,3 +46,4 @@ part 'components/alert.dart';
 part 'components/dialog.dart';
 part 'components/progress_dialog.dart';
 part 'components/empty_message.dart';
+part 'reusable_snackbar.dart';
