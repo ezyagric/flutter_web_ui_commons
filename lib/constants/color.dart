@@ -9,7 +9,7 @@ class AppColors{
   static const Color white =  Color(0xFFFFFFFF);
   static const Color text =  Color(0xFF434040);
   static const Color textLight = Color(0xFF7A7979);
-  static const Color danger  = Color(0xFFDB4C4C);
+  static const Color danger  = Color(0xFFDC2626);
 
   
   static const Color light  = Color(0xFFF9FAFA);

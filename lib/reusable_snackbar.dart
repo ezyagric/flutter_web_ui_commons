@@ -1,7 +1,5 @@
 part of "web_ui_commons.dart";
 
-
-
 enum SnackbarType { success, info, error, warning }
 
 class ReusableSnackbar {
@@ -223,7 +221,7 @@ class ReusableSnackbar {
         Container(
           padding: const EdgeInsets.all(6),
           decoration: BoxDecoration(
-            color: _getAccentColor(type).withOpacity(0.15),
+            color: _getAccentColor(type).withValues(alpha: 0.15),
             borderRadius: BorderRadius.circular(8),
           ),
           child: _getIcon(type),
@@ -334,39 +332,47 @@ class ReusableSnackbar {
   static Color _getBackgroundColor(SnackbarType type) {
     switch (type) {
       case SnackbarType.success:
-        return const Color(0xFF0F766E); // Modern teal
+        return AppColors.success; //const Color(0xFF0F766E); // Modern teal
       case SnackbarType.info:
-        return const Color(0xFF1E40AF); // Modern blue
+        return AppColors.black; // const Color(0xFF1E40AF); // Modern blue
       case SnackbarType.error:
-        return const Color(0xFFDC2626); // Modern red
+        return AppColors.danger; // const Color(0xFFDC2626); // Modern red
       case SnackbarType.warning:
-        return const Color(0xFFEA580C); // Modern orange
+        return AppColors.warning; // const Color(0xFFEA580C); // Modern orange
     }
   }
 
   static Color _getAccentColor(SnackbarType type) {
     switch (type) {
       case SnackbarType.success:
-        return const Color(0xFF10B981); // Bright teal
+        return AppColors.success
+            .withValues(alpha: 0.54); //const Color(0xFF0F766E); // Modern teal
       case SnackbarType.info:
-        return const Color(0xFF3B82F6); // Bright blue
+        return AppColors.black
+            .withValues(alpha: 0.54); // const Color(0xFF1E40AF); // Modern blue
       case SnackbarType.error:
-        return const Color(0xFFEF4444); // Bright red
+        return AppColors.danger
+            .withValues(alpha: 0.54); // const Color(0xFFDC2626); // Modern red
       case SnackbarType.warning:
-        return const Color(0xFFF59E0B); // Bright amber
+        return AppColors.warning.withValues(
+            alpha: 0.54); // const Color(0xFFEA580C); // Modern orange
     }
   }
 
   static Color _getShadowColor(SnackbarType type) {
     switch (type) {
       case SnackbarType.success:
-        return const Color(0xFF0F766E).withOpacity(0.3);
+        return AppColors.success
+            .withValues(alpha: 0.3); //const Color(0xFF0F766E); // Modern teal
       case SnackbarType.info:
-        return const Color(0xFF1E40AF).withOpacity(0.3);
+        return AppColors.black
+            .withValues(alpha: 0.3); // const Color(0xFF1E40AF); // Modern blue
       case SnackbarType.error:
-        return const Color(0xFFDC2626).withOpacity(0.3);
+        return AppColors.danger
+            .withValues(alpha: 0.3); // const Color(0xFFDC2626); // Modern red
       case SnackbarType.warning:
-        return const Color(0xFFEA580C).withOpacity(0.3);
+        return AppColors.warning.withValues(
+            alpha: 0.3); // const Color(0xFFEA580C); // Modern orange
     }
   }
 
@@ -375,25 +381,25 @@ class ReusableSnackbar {
       case SnackbarType.success:
         return Icon(
           Icons.check_circle_rounded,
-          color: _getAccentColor(type),
+          color: AppColors.white, //_getAccentColor(type),
           size: 18,
         );
       case SnackbarType.info:
         return Icon(
           Icons.info_rounded,
-          color: _getAccentColor(type),
+          color: AppColors.white, //_getAccentColor(type),
           size: 18,
         );
       case SnackbarType.error:
         return Icon(
           Icons.cancel_rounded,
-          color: _getAccentColor(type),
+          color: AppColors.white, //_getAccentColor(type),
           size: 18,
         );
       case SnackbarType.warning:
         return Icon(
           Icons.warning_rounded,
-          color: _getAccentColor(type),
+          color: AppColors.white, //_getAccentColor(type),
           size: 18,
         );
     }
