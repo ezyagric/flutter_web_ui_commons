@@ -211,7 +211,7 @@ class ReusableSnackbar {
           size: 16,
         ),
       ),
-      leftBarIndicatorColor: _getAccentColor(type),
+      // leftBarIndicatorColor: _getAccentColor(type),
     );
   }
 
@@ -334,7 +334,7 @@ class ReusableSnackbar {
       case SnackbarType.success:
         return AppColors.success; //const Color(0xFF0F766E); // Modern teal
       case SnackbarType.info:
-        return AppColors.black; // const Color(0xFF1E40AF); // Modern blue
+        return Colors.blueGrey; // const Color(0xFF1E40AF); // Modern blue
       case SnackbarType.error:
         return AppColors.danger; // const Color(0xFFDC2626); // Modern red
       case SnackbarType.warning:
