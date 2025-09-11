@@ -63,21 +63,21 @@ class ReusableSnackbar {
           child: Stack(
             children: [
               // Left accent bar
-              Positioned(
-                left: 0,
-                top: 0,
-                bottom: 0,
-                child: Container(
-                  width: 4,
-                  decoration: BoxDecoration(
-                    color: _getAccentColor(type),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(12),
-                      bottomLeft: Radius.circular(12),
-                    ),
-                  ),
-                ),
-              ),
+              // Positioned(
+              //   left: 0,
+              //   top: 0,
+              //   bottom: 0,
+              //   child: Container(
+              //     width: 4,
+              //     decoration: BoxDecoration(
+              //       color: _getAccentColor(type),
+              //       borderRadius: const BorderRadius.only(
+              //         topLeft: Radius.circular(12),
+              //         bottomLeft: Radius.circular(12),
+              //       ),
+              //     ),
+              //   ),
+              // ),
               // Content
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 14, 50, 14),
