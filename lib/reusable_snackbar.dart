@@ -40,7 +40,7 @@ class ReusableSnackbar {
         alignment: Alignment.bottomRight,
         child: Container(
           margin: const EdgeInsets.only(right: 20, bottom: 20),
-          width: 350,
+          width: 400,
           constraints: const BoxConstraints(minHeight: 70),
           decoration: BoxDecoration(
             color: _getBackgroundColor(type),
@@ -101,7 +101,7 @@ class ReusableSnackbar {
                             title,
                             style: const TextStyle(
                               color: Colors.white,
-                              fontSize: 14,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600,
                               letterSpacing: 0.2,
                             ),
@@ -119,7 +119,7 @@ class ReusableSnackbar {
                           message,
                           style: TextStyle(
                             color: Colors.white.withOpacity(0.9),
-                            fontSize: 12,
+                            fontSize: 13,
                             fontWeight: FontWeight.w400,
                             height: 1.3,
                             letterSpacing: 0.1,
