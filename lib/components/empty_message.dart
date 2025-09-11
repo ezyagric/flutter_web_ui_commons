@@ -1,14 +1,14 @@
 part of '../web_ui_commons.dart';
 
 class EmptyMessage extends StatelessWidget {
-  final String icon;
+  IconData? icon;
   final String title;
   final String subtitle;
   final Widget child;
 
-  const EmptyMessage(
+  EmptyMessage(
       {super.key,
-      this.icon = '',
+      this.icon = Icons.sentiment_very_dissatisfied,
       required this.title,
       this.subtitle = '',
       this.child = const Text('')});
@@ -19,12 +19,11 @@ class EmptyMessage extends StatelessWidget {
         padding: const EdgeInsets.all(36),
         child: Column(
           children: [
-            Visibility(
-                visible: icon != '',
-                child: SvgPicture.asset(
-                  icon,
-                  height: 80,
-                )),
+            Icon(
+              icon,
+              size: 80,
+              color: AppColors.text,
+            ),
             const SizedBox(
               height: 28,
             ),
@@ -33,6 +32,7 @@ class EmptyMessage extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: AppColors.text,
               textAlign: TextAlign.center,
+              fontSize: 24,
             ),
             const SizedBox(
               height: 8,
