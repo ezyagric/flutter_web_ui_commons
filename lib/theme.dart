@@ -169,44 +169,22 @@ var amountToPayInputDecoration = const InputDecoration(
   ),
 );
 
-// CheckboxThemeData checkboxTheme() {
-//   return CheckboxThemeData(
-//     checkColor:
-//         MaterialStateProperty.all(Colors.white), // Color of the check mark
-//     fillColor: WidgetStateProperty.resolveWith((states) {
-//       if (states.contains(WidgetState.selected)) {
-//         return AppColors.primary; // Color when checked
-//       }
-//       return Colors.transparent; // Color when unchecked
-//     }),
-//     shape: RoundedRectangleBorder(
-//       borderRadius: BorderRadius.circular(2), // Rounded corners
-//     ),
-//     side: const BorderSide(
-//         color: AppColors.primary, width: 2), // Border color and width
-//   );
-// }
-
-// RadioThemeData radioButtonTheme() {
-//   return RadioThemeData(fillColor: WidgetStateProperty.resolveWith((states) {
-//     if (states.contains(WidgetState.selected)) {
-//       return AppColors.primary; // Color when checked
-//     }
-//     return AppColors.text; // Color when unchecked
-//   }));
-// }
-
-// TabBarTheme tabBarThemeData() {
-//   return TabBarTheme(
-//     labelColor: AppColors.primary,
-//     unselectedLabelColor: Colors.grey,
-//     indicatorColor: AppColors.primary,
-//     unselectedLabelStyle: TextStyle(
-//         fontWeight: FontWeight.w700,
-//         fontFamily: 'Nunito Sans'),
-//     labelStyle: TextStyle(
-//         fontSize: 15,
-//         fontWeight: FontWeight.w900,
-//         fontFamily: GoogleFonts.nunitoSans().fontFamily),
-//   );
-// }
+var defaultInputDecoration = InputDecoration(
+  labelStyle: const TextStyle(fontSize: 13),
+  hintStyle: TextStyle(fontSize: 12, color: Colors.grey[500]),
+  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+  border: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(6),
+    borderSide: BorderSide(color: Colors.grey.withValues(alpha: 0.3)),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(6),
+    borderSide: BorderSide(color: Colors.grey.withValues(alpha: 0.3)),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(6),
+    borderSide: const BorderSide(color: blue, width: 1.5),
+  ),
+  filled: true,
+  fillColor: Colors.grey.withValues(alpha: 0.03),
+);
