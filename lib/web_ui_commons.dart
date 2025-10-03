@@ -14,6 +14,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:intl/intl.dart';
 import 'package:web_ui_commons/colors.dart';
+import 'package:web_ui_commons/paddings.dart';
 
 
 
@@ -38,6 +39,7 @@ part 'widgets/forms/datepicker.dart';
 part 'widgets/container.dart';
 part 'widgets/text.dart';
 part 'widgets/link.dart';
+part 'widgets/ribbon_widgets.dart';
 
 /**components */
 part 'components/shadow.dart';
