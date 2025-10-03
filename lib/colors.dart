@@ -19,6 +19,9 @@ const lightBlue = Color(0xFF018BC9);
 const selectedMenuItem = Color(0xFF637d93);
 const strippedTableColor = Color(0xFFf9f9f9);
 // #637d93
+const tableRowSelectColor = Color( 0xFFEDFBFF);
+const modalHeaderColor =Color(0x0D1F4564);
+const modalFooterColor = Color.fromRGBO(148, 170, 220, 0.02);
 
 // Graph Colors
 
