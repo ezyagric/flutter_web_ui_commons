@@ -122,9 +122,9 @@ class _FileInputFieldState extends State<FileInputField> {
           icon: Icons.photo_library_outlined,
           type: AppButtonStyle.success,
           onPressed: () async {
-           // final XFile? image =
-                //await ImagePicker().pickImage(source: ImageSource.gallery);
-           // uploadFile(image);
+            // final XFile? image =
+            //await ImagePicker().pickImage(source: ImageSource.gallery);
+            // uploadFile(image);
           },
         ),
         const SizedBox(
@@ -144,54 +144,54 @@ class _FileInputFieldState extends State<FileInputField> {
     );
   }
 
-  Future<String> uploadFile(XFile? image) async {
-    if (image == null) return "";
+  // Future<String> uploadFile(XFile? image) async {
+  //   if (image == null) return "";
 
-    setState(() {
-      isUploading = true;
-      uploadComplete = false;
-      uploadFailed = false;
-    });
-    //final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+  //   setState(() {
+  //     isUploading = true;
+  //     uploadComplete = false;
+  //     uploadFailed = false;
+  //   });
+  //   //final image = await ImagePicker().pickImage(source: ImageSource.gallery);
 
-    //final compressedImage = await compressImageFile(image: image!);
+  //   //final compressedImage = await compressImageFile(image: image!);
 
-    final imageFile = File(image!.path);
-    //final compressedImage = await Utils.compressFile(imageFile);
-    final compressedImage = imageFile;
+  //   final imageFile = File(image!.path);
+  //   //final compressedImage = await Utils.compressFile(imageFile);
+  //   final compressedImage = imageFile;
 
-    String filename = DateTime.now().millisecondsSinceEpoch.toString();
+  //   String filename = DateTime.now().millisecondsSinceEpoch.toString();
 
-    Reference ref = FirebaseStorage.instanceFor(app: Firebase.app("[AUTH]"))
-        .ref()
-        .child('ids/$filename.jpg');
+  //   Reference ref = FirebaseStorage.instanceFor(app: Firebase.app("[AUTH]"))
+  //       .ref()
+  //       .child('ids/$filename.jpg');
 
-    final UploadTask uploadTask = ref.putFile(compressedImage!);
-    // await ref.putFile(compressedImage!);
+  //   final UploadTask uploadTask = ref.putFile(compressedImage!);
+  //   // await ref.putFile(compressedImage!);
 
-    // Monitor upload progress
-    uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
-      setState(() {
-        uploadProgress =
-            ((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-                .roundToDouble(); // Progress as 0-1
-      });
-    }).onDone(() async {
-      await ref.getDownloadURL().then((value) {
-        filename = value;
+  //   // Monitor upload progress
+  //   uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
+  //     setState(() {
+  //       uploadProgress =
+  //           ((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+  //               .roundToDouble(); // Progress as 0-1
+  //     });
+  //   }).onDone(() async {
+  //     await ref.getDownloadURL().then((value) {
+  //       filename = value;
 
-        //preview uploaded file
-        setState(() {
-          uploadedImageFile = value;
-          isUploading = false;
-          uploadComplete = true;
-        });
+  //       //preview uploaded file
+  //       setState(() {
+  //         uploadedImageFile = value;
+  //         isUploading = false;
+  //         uploadComplete = true;
+  //       });
 
-        //run event
-        widget.onFileUploaded!(value);
-      });
-    });
+  //       //run event
+  //       widget.onFileUploaded!(value);
+  //     });
+  //   });
 
-    return filename;
-  }
+  //   return filename;
+  // }
 }
